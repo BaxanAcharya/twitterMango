@@ -57,7 +57,7 @@ router.post("/check",(req,res,next)=>{
     User.findOne({email: req.body.email})
     .then((user)=>{
         if (user == null) {
-            res.json({status: "good to go"})
+            res.json({status: "go ahead"})
         }else{
             let err = new Error('Email already registered!');
             err.status = 401;
